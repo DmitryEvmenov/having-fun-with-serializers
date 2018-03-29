@@ -55,6 +55,7 @@
     <Compile Include="CarsForm.Designer.cs">
       <DependentUpon>CarsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DllHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CarsForm.resx">

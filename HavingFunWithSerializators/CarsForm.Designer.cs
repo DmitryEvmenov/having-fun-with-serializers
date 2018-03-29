@@ -30,7 +30,7 @@
         {
             this.carsDataGridView = new System.Windows.Forms.DataGridView();
             this.saveAllButton = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveToLoadFromDialog = new System.Windows.Forms.OpenFileDialog();
             this.serializerTypeComboBox = new System.Windows.Forms.ComboBox();
             this.refreshSerializersButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@
             this.saveAllButton.UseVisualStyleBackColor = true;
             this.saveAllButton.Click += new System.EventHandler(this.saveAllButton_Click);
             // 
-            // openFileDialog1
+            // saveToLoadFromDialog
             // 
-            this.openFileDialog1.FileName = "saveToFileDialog";
+            this.saveToLoadFromDialog.FileName = "saveToFileDialog";
             // 
             // serializerTypeComboBox
             // 
@@ -121,7 +121,7 @@
 
         private System.Windows.Forms.DataGridView carsDataGridView;
         private System.Windows.Forms.Button saveAllButton;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog saveToLoadFromDialog;
         private System.Windows.Forms.ComboBox serializerTypeComboBox;
         private System.Windows.Forms.Button refreshSerializersButton;
         private System.Windows.Forms.Label label1;
