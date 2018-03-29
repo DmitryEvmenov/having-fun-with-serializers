@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HavingFunWithSerializators", "HavingFunWithSerializators\HavingFunWithSerializators.csproj", "{05013012-8FCF-4F51-B084-C4409E7737C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serializers", "Serializers", "{C26ACF07-F68B-4809-B885-18FB0EFFA123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML", "XML\XML.csproj", "{79EA8F38-F251-4164-A1AD-19E0EF10691F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Abstractions\Abstractions.csproj", "{7BE13728-2510-47B3-B2AE-DE98CEF88AED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +21,21 @@ Global
 		{05013012-8FCF-4F51-B084-C4409E7737C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05013012-8FCF-4F51-B084-C4409E7737C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05013012-8FCF-4F51-B084-C4409E7737C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EA8F38-F251-4164-A1AD-19E0EF10691F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EA8F38-F251-4164-A1AD-19E0EF10691F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EA8F38-F251-4164-A1AD-19E0EF10691F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EA8F38-F251-4164-A1AD-19E0EF10691F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{79EA8F38-F251-4164-A1AD-19E0EF10691F} = {C26ACF07-F68B-4809-B885-18FB0EFFA123}
+		{7BE13728-2510-47B3-B2AE-DE98CEF88AED} = {C26ACF07-F68B-4809-B885-18FB0EFFA123}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31A58030-575B-43F1-AEFD-8C3CEC92CDBD}
