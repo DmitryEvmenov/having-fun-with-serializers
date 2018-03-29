@@ -1,5 +1,10 @@
-﻿namespace Cars
+﻿using System.Xml.Serialization;
+
+namespace Cars
 {
+    [XmlInclude(typeof(LuxuryCar))]
+    [XmlInclude(typeof(SportCar))]
+    [XmlInclude(typeof(Truck))]
     public abstract class Car
     {
         public CarType Type { get; }

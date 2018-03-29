@@ -59,6 +59,6 @@ namespace HavingFunWithSerializators
         }
 
         private IMySerializer ChosenSerializer => _serializers
-            .First(s => (s as INamed)?.FriendlyName == serializerTypeComboBox.SelectedText);
+            .First(s => (s as INamed)?.FriendlyName == serializerTypeComboBox.SelectedValue);
     }
 }

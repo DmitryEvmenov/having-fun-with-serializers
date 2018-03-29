@@ -56,10 +56,6 @@
             this.saveAllButton.UseVisualStyleBackColor = true;
             this.saveAllButton.Click += new System.EventHandler(this.saveAllButton_Click);
             // 
-            // saveToLoadFromDialog
-            // 
-            this.saveToLoadFromDialog.FileName = "saveToFileDialog";
-            // 
             // serializerTypeComboBox
             // 
             this.serializerTypeComboBox.FormattingEnabled = true;
