@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace HavingFunWithSerializators
 {
-    public partial class Form1 : Form
+    public partial class CarsForm : Form
     {
-        public Form1()
+        public CarsForm()
         {
             InitializeComponent();
+        }
+
+        private void CarsForm_Load(object sender, EventArgs e)
+        {
+            carsDataGridView.DataSource = CarsDataProvider.GetCars();
         }
     }
 }
