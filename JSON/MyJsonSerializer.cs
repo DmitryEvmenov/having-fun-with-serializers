@@ -1,13 +1,12 @@
 ﻿using System.IO;
-using System.Xml.Serialization;
 using Abstractions;
+using Newtonsoft.Json;
 
-namespace XML
+namespace JSON
 {
-    public class MyXmlSerializer : MyBaseSerializer<XmlSerializer>, INamed
+    public class MyJsonSerializer : MyBaseSerializer<JsonSerializer>, INamed
     {
-        protected override XmlSerializer GetNewSerializer<TObj>() => new XmlSerializer(typeof(TObj));
-
+        protected override JsonSerializer GetNewSerializer<TObj>() => new JsonSerializer();
         protected override void HandleSerialization<TObj>(TObj data, string pathTo)
         {
             var streamWriter = new StreamWriter(pathTo);
@@ -17,9 +16,11 @@ namespace XML
         protected override TObj HandleDeserialization<TObj>(string pathFrom)
         {
             var fileStream = new FileStream(pathFrom, FileMode.Open, FileAccess.Read, FileShare.Read);
-            return (TObj)Serializer.Deserialize(fileStream);
+            var reader = new StreamReader(fileStream);
+
+           return (TObj)Serializer.Deserialize(reader, typeof(TObj));
         }
 
-        public string FriendlyName => "XML";
+        public string FriendlyName => "JSON";
     }
 }
