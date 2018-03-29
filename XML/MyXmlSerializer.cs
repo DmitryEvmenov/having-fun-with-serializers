@@ -1,21 +1,23 @@
-﻿using System;
+﻿using System.IO;
 using System.Xml.Serialization;
 using Abstractions;
 
 namespace XML
 {
-    public class MyXmlSerializer : IMySerializer
+    public class MyXmlSerializer : MyBaseSerializer<XmlSerializer>
     {
-        private readonly XmlSerializer Serializer;
+        protected override XmlSerializer GetNewSerializer<TObj>() => new XmlSerializer(typeof(TObj));
 
-        public TObj Deserialize<TObj>(string pathFrom)
+        protected override void HandleSerialization<TObj>(TObj data, string pathTo)
         {
-            throw new NotImplementedException();
+            var streamWriter = new StreamWriter(pathTo);
+            Serializer.Serialize(streamWriter, data);
         }
 
-        public void Serialize<TObj>(TObj data, string pathTo)
+        protected override TObj HandleDeserialization<TObj>(string pathFrom)
         {
-            throw new NotImplementedException();
+            var textReader = new FileStream(pathFrom, FileMode.Open, FileAccess.Read, FileShare.Read);
+            return (TObj)Serializer.Deserialize(textReader);
         }
     }
 }
