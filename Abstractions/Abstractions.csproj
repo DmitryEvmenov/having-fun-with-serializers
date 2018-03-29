@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMySerializer.cs" />
+    <Compile Include="INamed.cs" />
     <Compile Include="MyBaseSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

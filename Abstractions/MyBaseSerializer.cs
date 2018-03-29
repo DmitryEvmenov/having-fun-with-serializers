@@ -15,6 +15,7 @@
         }
 
         protected TSerializer Serializer;
+
         protected abstract TSerializer GetNewSerializer<TObj>();
 
         protected abstract void HandleSerialization<TObj>(TObj data, string pathTo);

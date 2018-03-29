@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.carsDataGridView = new System.Windows.Forms.DataGridView();
+            this.saveAllButton = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.carsDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -37,14 +39,28 @@
             this.carsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carsDataGridView.Location = new System.Drawing.Point(12, 12);
             this.carsDataGridView.Name = "carsDataGridView";
-            this.carsDataGridView.Size = new System.Drawing.Size(776, 375);
+            this.carsDataGridView.Size = new System.Drawing.Size(555, 277);
             this.carsDataGridView.TabIndex = 0;
+            // 
+            // saveAllButton
+            // 
+            this.saveAllButton.Location = new System.Drawing.Point(58, 325);
+            this.saveAllButton.Name = "saveAllButton";
+            this.saveAllButton.Size = new System.Drawing.Size(131, 23);
+            this.saveAllButton.TabIndex = 1;
+            this.saveAllButton.Text = "Save All";
+            this.saveAllButton.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "saveToFileDialog";
             // 
             // CarsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(586, 504);
+            this.Controls.Add(this.saveAllButton);
             this.Controls.Add(this.carsDataGridView);
             this.Name = "CarsForm";
             this.Text = "Form1";
@@ -57,6 +73,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView carsDataGridView;
+        private System.Windows.Forms.Button saveAllButton;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

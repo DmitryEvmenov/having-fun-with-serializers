@@ -4,7 +4,7 @@ using Abstractions;
 
 namespace XML
 {
-    public class MyXmlSerializer : MyBaseSerializer<XmlSerializer>
+    public class MyXmlSerializer : MyBaseSerializer<XmlSerializer>, INamed
     {
         protected override XmlSerializer GetNewSerializer<TObj>() => new XmlSerializer(typeof(TObj));
 
@@ -19,5 +19,7 @@ namespace XML
             var textReader = new FileStream(pathFrom, FileMode.Open, FileAccess.Read, FileShare.Read);
             return (TObj)Serializer.Deserialize(textReader);
         }
+
+        public string FriendlyName => "XML";
     }
 }
