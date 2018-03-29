@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XML", "XML\XML.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstractions", "Abstractions\Abstractions.csproj", "{7BE13728-2510-47B3-B2AE-DE98CEF88AED}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{DDC22439-A52B-4F34-A5D0-C6E02C1BCE4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars", "Cars\Cars.csproj", "{15F04C31-4DEE-41CB-9E15-D67788C78D3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +33,10 @@ Global
 		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE13728-2510-47B3-B2AE-DE98CEF88AED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15F04C31-4DEE-41CB-9E15-D67788C78D3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15F04C31-4DEE-41CB-9E15-D67788C78D3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15F04C31-4DEE-41CB-9E15-D67788C78D3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15F04C31-4DEE-41CB-9E15-D67788C78D3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +44,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{79EA8F38-F251-4164-A1AD-19E0EF10691F} = {C26ACF07-F68B-4809-B885-18FB0EFFA123}
 		{7BE13728-2510-47B3-B2AE-DE98CEF88AED} = {C26ACF07-F68B-4809-B885-18FB0EFFA123}
+		{15F04C31-4DEE-41CB-9E15-D67788C78D3D} = {DDC22439-A52B-4F34-A5D0-C6E02C1BCE4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31A58030-575B-43F1-AEFD-8C3CEC92CDBD}
