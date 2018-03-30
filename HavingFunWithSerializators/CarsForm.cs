@@ -20,7 +20,7 @@ namespace HavingFunWithSerializators
         private void CarsForm_Load(object sender, EventArgs e)
         {
             _cars = CarsDataProvider.GetCars();
-            carsDataGridView.DataSource = _cars;
+            RefreshCarsDataSource();
             RefreshSerializers();
         }
 
@@ -55,8 +55,14 @@ namespace HavingFunWithSerializators
 
         private void loadFromButton_Click(object sender, EventArgs e)
         {
-
+            if (saveToLoadFromDialog.ShowDialog() == DialogResult.OK)
+            {
+                _cars = ChosenSerializer.Deserialize<List<Car>>(saveToLoadFromDialog.FileName);
+                RefreshCarsDataSource();
+            }
         }
+
+        private void RefreshCarsDataSource() => carsDataGridView.DataSource = _cars;
 
         private IMySerializer ChosenSerializer => _serializers
             .First(s => (s as INamed)?.FriendlyName == serializerTypeComboBox.SelectedValue);

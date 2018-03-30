@@ -5,12 +5,17 @@ namespace Cars
     [XmlInclude(typeof(LuxuryCar))]
     [XmlInclude(typeof(SportCar))]
     [XmlInclude(typeof(Truck))]
-    public abstract class Car
+    public class Car
     {
         public CarType Type { get; }
         public int Weight { get; set; }
         public string BrandName { get; set; }
         public CarColor Color { get; set; }
+
+        public Car()
+        {
+            
+        }
 
         protected Car(CarType type)
         {
