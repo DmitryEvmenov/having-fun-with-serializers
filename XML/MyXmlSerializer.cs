@@ -10,14 +10,18 @@ namespace XML
 
         protected override void HandleSerialization<TObj>(TObj data, string pathTo)
         {
-            var streamWriter = new StreamWriter(pathTo);
-            Serializer.Serialize(streamWriter, data);
+            using (var streamWriter = new StreamWriter(pathTo))
+            {
+                Serializer.Serialize(streamWriter, data);
+            }  
         }
 
         protected override TObj HandleDeserialization<TObj>(string pathFrom)
         {
-            var fileStream = new FileStream(pathFrom, FileMode.Open, FileAccess.Read, FileShare.Read);
-            return (TObj)Serializer.Deserialize(fileStream);
+            using (var fileStream = new FileStream(pathFrom, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                return (TObj)Serializer.Deserialize(fileStream);
+            }
         }
 
         public string FriendlyName => "XML";
