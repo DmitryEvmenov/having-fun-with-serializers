@@ -9,10 +9,14 @@ namespace HavingFunWithSerializators
 {
     static class DllHelper
     {
+        private static string _sourcePath;
+
         public static void LoadAllDllsInDirectory(string path = "D://serz")
         {
-            var binPath = Path.Combine(path);
+            _sourcePath = path;
 
+            var binPath = Path.Combine(_sourcePath);
+            AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             foreach (string dll in Directory.GetFiles(binPath, "*.dll", SearchOption.AllDirectories))
             {
                 try
@@ -33,5 +37,10 @@ namespace HavingFunWithSerializators
                 .Where(p => assignableFromType.IsAssignableFrom(p) && p.IsClass && !p.IsAbstract)
                 .ToList();
 
+        private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            string s = _sourcePath + '/' + args.Name.Remove(args.Name.IndexOf(',')) + ".dll";
+            return Assembly.LoadFile(s);
+        }
     }
 }
