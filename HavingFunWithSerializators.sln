@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapting", "Adapting", "{8B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary", "Binary\Binary.csproj", "{9D668574-DAF5-42EA-9655-D3DB48C3E0DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryAdapt", "BinaryAdapt\BinaryAdapt.csproj", "{129068ED-2BF1-47C8-AE18-ACA1D918C426}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9D668574-DAF5-42EA-9655-D3DB48C3E0DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D668574-DAF5-42EA-9655-D3DB48C3E0DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D668574-DAF5-42EA-9655-D3DB48C3E0DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129068ED-2BF1-47C8-AE18-ACA1D918C426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129068ED-2BF1-47C8-AE18-ACA1D918C426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129068ED-2BF1-47C8-AE18-ACA1D918C426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129068ED-2BF1-47C8-AE18-ACA1D918C426}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{01497EED-7EE6-4000-98F0-D3F7EE5D12CD} = {C26ACF07-F68B-4809-B885-18FB0EFFA123}
 		{8B8BC4EF-879D-4A66-AA4D-162FCD3B5A0B} = {C26ACF07-F68B-4809-B885-18FB0EFFA123}
 		{9D668574-DAF5-42EA-9655-D3DB48C3E0DE} = {8B8BC4EF-879D-4A66-AA4D-162FCD3B5A0B}
+		{129068ED-2BF1-47C8-AE18-ACA1D918C426} = {8B8BC4EF-879D-4A66-AA4D-162FCD3B5A0B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {31A58030-575B-43F1-AEFD-8C3CEC92CDBD}
