@@ -48,9 +48,9 @@
             // 
             // saveAllButton
             // 
-            this.saveAllButton.Location = new System.Drawing.Point(58, 325);
+            this.saveAllButton.Location = new System.Drawing.Point(128, 325);
             this.saveAllButton.Name = "saveAllButton";
-            this.saveAllButton.Size = new System.Drawing.Size(131, 23);
+            this.saveAllButton.Size = new System.Drawing.Size(174, 23);
             this.saveAllButton.TabIndex = 1;
             this.saveAllButton.Text = "Save All";
             this.saveAllButton.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@
             // 
             // loadFromButton
             // 
-            this.loadFromButton.Location = new System.Drawing.Point(58, 354);
+            this.loadFromButton.Location = new System.Drawing.Point(128, 354);
             this.loadFromButton.Name = "loadFromButton";
-            this.loadFromButton.Size = new System.Drawing.Size(131, 23);
+            this.loadFromButton.Size = new System.Drawing.Size(174, 23);
             this.loadFromButton.TabIndex = 5;
             this.loadFromButton.Text = "Load From";
             this.loadFromButton.UseVisualStyleBackColor = true;

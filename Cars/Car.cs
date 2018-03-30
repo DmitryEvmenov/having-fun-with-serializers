@@ -7,7 +7,7 @@ namespace Cars
     [XmlInclude(typeof(Truck))]
     public class Car
     {
-        public CarType Type { get; }
+        public CarType Type { get; set; }
         public int Weight { get; set; }
         public string BrandName { get; set; }
         public CarColor Color { get; set; }

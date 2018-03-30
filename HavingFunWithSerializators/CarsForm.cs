@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows.Forms;
 using Abstractions;
@@ -62,7 +63,11 @@ namespace HavingFunWithSerializators
             }
         }
 
-        private void RefreshCarsDataSource() => carsDataGridView.DataSource = _cars;
+        private void RefreshCarsDataSource()
+        {
+            carsDataGridView.DataSource = new BindingSource(new BindingList<Car>(_cars), null);
+            carsDataGridView.Refresh();
+        }
 
         private IMySerializer ChosenSerializer => _serializers
             .First(s => (s as INamed)?.FriendlyName == serializerTypeComboBox.SelectedValue);
