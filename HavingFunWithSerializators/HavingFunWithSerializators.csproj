@@ -89,6 +89,10 @@
       <Project>{7BE13728-2510-47B3-B2AE-DE98CEF88AED}</Project>
       <Name>Abstractions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Binary\Binary.csproj">
+      <Project>{9d668574-daf5-42ea-9655-d3db48c3e0de}</Project>
+      <Name>Binary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Cars\Cars.csproj">
       <Project>{15F04C31-4DEE-41CB-9E15-D67788C78D3D}</Project>
       <Name>Cars</Name>

@@ -9,7 +9,7 @@ namespace HavingFunWithSerializators
 {
     static class DllHelper
     {
-        public static void LoadAllBinDirectoryAssemblies(string path = "D://serz")
+        public static void LoadAllDllsInDirectory(string path = "D://serz")
         {
             var binPath = Path.Combine(path);
 

@@ -29,7 +29,7 @@ namespace HavingFunWithSerializators
         {
             _serializers.Clear();
 
-            DllHelper.LoadAllBinDirectoryAssemblies();
+            DllHelper.LoadAllDllsInDirectory();
             var types = DllHelper.GetTypes(typeof(IMySerializer));
 
             foreach (var type in types)
